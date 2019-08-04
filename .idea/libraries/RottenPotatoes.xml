@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="RottenPotatoes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sqlite-jdbc-3.27.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfoenix-9.0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
