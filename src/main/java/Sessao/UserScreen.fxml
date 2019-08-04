@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FE5F55;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sessao.UserScreenController">
+   <children>
+      <AnchorPane fx:id="profilePane" prefHeight="720.0" prefWidth="409.0" style="-fx-background-color: #050517;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="105.0" layoutY="14.0">
+               <image>
+                  <Image url="@../img/profile.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="5.0" layoutY="189.0" prefHeight="100.0" prefWidth="403.0">
+               <children>
+                  <Text fx:id="userName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+                     <font>
+                        <Font name="BigNoodleTitling Oblique" size="40.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <VBox layoutX="3.0" layoutY="270.0" prefHeight="447.0" prefWidth="403.0">
+               <children>
+                  <JFXButton fx:id="btProfile" onAction="#mudarAba" prefHeight="89.0" prefWidth="407.0" style="-fx-background-radius: 30 0 0 30;" text="Perfil" textFill="WHITE">
+                     <font>
+                        <Font name="BigNoodleTitling" size="40.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btAmigos" layoutX="10.0" layoutY="10.0" onAction="#mudarAba" prefHeight="89.0" prefWidth="407.0" style="-fx-background-radius: 30 0 0 30;" text="Amigos" textFill="WHITE">
+                     <font>
+                        <Font name="BigNoodleTitling" size="40.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btFavoritos" layoutX="10.0" layoutY="99.0" onAction="#mudarAba" prefHeight="89.0" prefWidth="407.0" style="-fx-background-radius: 30 0 0 30;" text="Filmes Favoritos" textFill="WHITE">
+                     <font>
+                        <Font name="BigNoodleTitling" size="40.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btBuscar" layoutX="10.0" layoutY="188.0" onAction="#mudarAba" prefHeight="89.0" prefWidth="407.0" style="-fx-background-radius: 30 0 0 30;" text="Buscar Filmes" textFill="WHITE">
+                     <font>
+                        <Font name="BigNoodleTitling" size="40.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btSair" layoutX="10.0" layoutY="277.0" onAction="#sair" prefHeight="89.0" prefWidth="407.0" style="-fx-background-radius: 30 0 0 30;" text="Sair" textFill="WHITE">
+                     <font>
+                        <Font name="BigNoodleTitling" size="40.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contentPane" layoutX="409.0" prefHeight="720.0" prefWidth="871.0">
+         <children>
+            <Text fill="WHITE" layoutX="102.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO ROTTEN POTATOES!">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="76.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="perfilPane" layoutX="409.0" prefHeight="720.0" prefWidth="871.0" visible="false">
+         <children>
+            <Text fx:id="perfilUserName" fill="WHITE" layoutX="228.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="inNome" focusColor="#050517" layoutX="235.0" layoutY="65.0" prefHeight="43.0" prefWidth="402.0" unFocusColor="WHITE" />
+            <JFXButton fx:id="btNome" layoutX="380.0" layoutY="114.0" onAction="#atualizarDados" prefHeight="43.0" prefWidth="98.0" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="perfilSobrenome" fill="WHITE" layoutX="228.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SOBRENOME" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="inSobrenome" focusColor="#050517" layoutX="228.0" layoutY="216.0" prefHeight="43.0" prefWidth="402.0" unFocusColor="WHITE" />
+            <JFXButton fx:id="btSobrenome" layoutX="380.0" layoutY="267.0" onAction="#atualizarDados" prefHeight="43.0" prefWidth="98.0" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="perfilEmail" fill="WHITE" layoutX="228.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="inEmail" focusColor="#050517" layoutX="228.0" layoutY="392.0" prefHeight="43.0" prefWidth="402.0" unFocusColor="WHITE" />
+            <JFXButton fx:id="btEmail" layoutX="380.0" layoutY="448.0" onAction="#updateUser" prefHeight="43.0" prefWidth="98.0" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="inOldPass" focusColor="#050517" layoutX="180.0" layoutY="617.0" prefHeight="25.0" prefWidth="200.0" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="inNewPass" focusColor="#050517" layoutX="478.0" layoutY="609.0" prefHeight="32.0" prefWidth="200.0" unFocusColor="WHITE" />
+            <Text fill="WHITE" layoutX="79.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha atual" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="377.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nova senha" textAlignment="CENTER" wrappingWidth="401.87999725341797">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btMudarSenha" layoutX="380.0" layoutY="586.0" onAction="#updateUser" prefHeight="43.0" prefWidth="98.0" text="Mudar" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="20.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="warning" fill="WHITE" layoutX="-6.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="871.0">
+               <font>
+                  <Font name="BigNoodleTitling Oblique" size="40.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btExcluir" layoutX="706.0" layoutY="642.0" onAction="#excluirConta" prefHeight="55.0" prefWidth="146.0" text="excluir conta" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="amigosPane" layoutX="409.0" prefHeight="720.0" prefWidth="871.0" visible="false" />
+      <AnchorPane fx:id="filmesPane" layoutX="409.0" prefHeight="720.0" prefWidth="871.0" visible="false">
+         <children>
+            <ImageView fx:id="img1" fitHeight="450.0" fitWidth="290.0" layoutX="59.0" layoutY="30.0" pickOnBounds="true" />
+            <Text fx:id="f1" fill="WHITE" layoutX="59.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="289.99999999999994">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="img2" fitHeight="450.0" fitWidth="290.0" layoutX="511.0" layoutY="29.0" pickOnBounds="true" />
+            <Text fx:id="f2" fill="WHITE" layoutX="511.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="289.99999999999994">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
+            <Text fx:id="msg" fill="WHITE" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="778.0">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="785.0" layoutY="658.0" onAction="#nextFav" text="NEXT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="27.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="buscaPane" layoutX="409.0" prefHeight="720.0" prefWidth="871.0" visible="false">
+         <children>
+            <JFXButton layoutX="785.0" layoutY="663.0" onAction="#proxBusca" text="NEXT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="27.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="bimg2" fitHeight="450.0" fitWidth="290.0" layoutX="531.0" layoutY="14.0" pickOnBounds="true" />
+            <Text fx:id="bf2" fill="WHITE" layoutX="531.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="289.99999999999994">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="bimg1" fitHeight="450.0" fitWidth="290.0" layoutX="47.0" layoutY="14.0" pickOnBounds="true" />
+            <Text fx:id="bf1" fill="WHITE" layoutX="47.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="289.99999999999994">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="14.0" layoutY="663.0" onAction="#prevBusca" text="Back" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="BigNoodleTitling" size="27.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
